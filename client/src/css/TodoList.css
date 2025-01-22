@@ -1,0 +1,154 @@
+/* Todo List Container */
+.todo-list {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+/* Edit Section */
+.edit-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.edit-section input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.edit-section input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(1);
+    box-shadow: none;
+}
+
+.update-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.update-btn:hover {
+    background-color: #0056b3;
+}
+
+.cancel-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Todo Items */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    margin: 8px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02);
+}
+
+.todo-text {
+    flex: 1;
+    margin-right: 16px;
+    font-size: 1rem;
+    word-break: break-word;
+}
+
+/* Icon Styles */
+.icon1,
+.icon2 {
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #6c757d;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.icon1:hover,
+.icon2:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+/* Empty State */
+.no-todos {
+    text-align: center;
+    color: #6c757d;
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .todo-list {
+        padding: 15px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .todo-text {
+        margin-right: 0;
+    }
+
+    .icon1,
+    .icon2 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
