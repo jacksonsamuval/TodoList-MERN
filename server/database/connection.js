@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 function RunServer(){
     try {
-        mongoose.connect('mongodb+srv://root:mynameisjack77950@jobapp.1s8es.mongodb.net/ToDoList?retryWrites=true&w=majority&appName=JobApp');
+        mongoose.connect(process.env.MONGO_URI);
         console.log("MongoDb Connected");
     } catch (error){
         console.log("Not Connected");
